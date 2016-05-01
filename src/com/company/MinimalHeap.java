@@ -37,7 +37,7 @@ public class MinimalHeap {
      * @param items An array to add to the current allocated storage
      */
     public void TinyAlloc (byte[] items) {
-        if (this.storage.length == 0) {
+        if (this.storage == null) {
             System.out.println("The heap should be initialized first.");
         } else if (this.free_position > this.storage.length || (this.free_position + items.length) > this.storage.length) {
             System.out.println("There is not enough space to allocate the specified items.");
@@ -112,5 +112,17 @@ public class MinimalHeap {
             this.free_position = temp_free_position;
             AdjustHeap();
         }
+    }
+
+    /**
+     * Gets the storage with a currents array state
+     * @return storage
+     */
+    public byte[] getStorage() {
+        return this.storage;
+    }
+
+    public int getFreePosition() {
+        return this.free_position;
     }
 }
