@@ -122,6 +122,10 @@ public class MinimalHeap {
         return this.storage;
     }
 
+    /**
+     * Gets the current current position inside a heap
+     * @return free_position
+     */
     public int getFreePosition() {
         return this.free_position;
     }
