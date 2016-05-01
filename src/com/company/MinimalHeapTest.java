@@ -24,9 +24,8 @@ public class MinimalHeapTest {
         minimalHeap.AllocTinyHeap(test_array.length);
         minimalHeap.TinyAlloc(test_array);
         minimalHeap.DeleteTinyHeap();
-        assertEquals("Heap storage length should be 0", 0, minimalHeap.getStorage().length);
         assertEquals("Heap storage should point to null", null, minimalHeap.getStorage());
-        assertEquals("The current free position in heap should be 0", minimalHeap.getFreePosition());
+        assertEquals("The current free position in heap should be 0", 0, minimalHeap.getFreePosition());
     }
 
     /** Check that the bytes array is allocated correctly **/
