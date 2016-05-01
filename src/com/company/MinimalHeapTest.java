@@ -1,9 +1,6 @@
 package com.company;
 
-
 import org.junit.Test;
-import org.testng.Assert;
-
 import static org.junit.Assert.*;
 
 public class MinimalHeapTest {
